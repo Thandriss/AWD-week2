@@ -16,8 +16,10 @@ app.get("/hello", (req, res) => {
 })
 
 app.get("/echo/:id", (req, res) => {
-    let id = req.params.id;
-    let el = list.find(list => list.id === id);
+    let MyId = req.params.id;
+    let el = {
+        id: MyId
+    };
     res.json(el);
 })
 
